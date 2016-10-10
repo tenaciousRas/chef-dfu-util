@@ -1,0 +1,14 @@
+<% if @user_install %>
+<% else %>
+<% end %>
+# sudo apt-get build-dep dfu-util
+if [ ! -d "<%= @dfu_util_dir %>" ]; then
+  echo "something went wrong during dfu-util build, the required directories are missing!!!"
+  exit 1
+fi
+cd <%= @dfu_util_dir %>
+./autogen.sh
+./configure
+make
+sudo make install
+exit $?
