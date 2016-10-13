@@ -40,9 +40,11 @@ git node['dfu_util']['dir'] do
   group node['dfu_util']['group']
   repository node['dfu_util']['repo_url']
   reference node['dfu_util']['repo_ref']
-  retries 5
-  retry_delay 5
+  timeout 5
+  retries 2
+  retry_delay 2
   action :sync
+  not_if { ::File.directory?("#{node['dfu_util']['dir']}/.git") }
 end
 
 package 'Install DFU-UTIL Make Dependencies' do
