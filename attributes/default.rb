@@ -23,5 +23,5 @@ default['dfu_util']['group'] = 'vagrant'
 # Most directories are relative to this
 default['dfu_util']['dir'] = "/home/#{node['dfu_util']['user']}/dfu-util"
 
-default['dfu_util']['repo_url'] = "https://gitorious.org/dfu-util/dfu-util.git"
+default['dfu_util']['repo_url'] = "git://git.code.sf.net/p/dfu-util/dfu-util"
 default['dfu_util']['repo_ref'] = "master"
