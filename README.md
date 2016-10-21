@@ -23,57 +23,15 @@ Customize the attributes to suit site specific conventions and defaults.
 
 ### dfu-util::default
 
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><span style="font-family: monospace;">['dfu_util']['user']</span></td>
-    <td>String</td>
-    <td>User name used for install.  The binary package will be given these user permissions and placed under this users home directory.</td>
-    <td><span style="font-family: monospace;">vagrant</span></td>
-  </tr>
-  <tr>
-    <td><span style="font-family: monospace;">['dfu_util']['group']</span></td>
-    <td>String</td>
-    <td>Group to use for install.</td>
-    <td><span style="font-family: monospace;">vagrant</span></td>
-  </tr>
-  <tr>
-    <td><span style="font-family: monospace;">['dfu_util']['dir']</span></td>
-    <td>String</td>
-    <td>Directory to place dfu_util_embedded downloads/binaries/sources.</td>
-    <td><span style="font-family: monospace;">/home/#{node['dfu_util']['user']}/dfu-util</span></td>
-  </tr>
-  <tr>
-    <td><span style="font-family: monospace;">['dfu_util']['directories']['tmp']</span></td>
-    <td>String</td>
-    <td>tmp folder for cookbook-related activities</td>
-    <td><span style="font-family: monospace;">#{node['dfu_util']['dir']}/tmp</span></td>
-  </tr>
-  <tr>
-    <td><span style="font-family: monospace;">['dfu_util']['directories']['bin']</span></td>
-    <td>String</td>
-    <td>bin folder for cookbook-related activities</td>
-    <td><span style="font-family: monospace;">#{node['dfu_util']['dir']}/bin</span></td>
-  </tr>
-  <tr>
-    <td><span style="font-family: monospace;">['dfu_util']['repo_url']</span></td>
-    <td>String</td>
-    <td>dfu-util source git repository URL</td>
-    <td><span style="font-family: monospace;">https://gitorious.org/dfu-util/dfu-util.git</span></td>
-  </tr>
-  <tr>
-    <td><span style="font-family: monospace;">['dfu_util']['repo_ref']</span></td>
-    <td>String</td>
-    <td>dfu-util source repository git-ref</td>
-    <td><span style="font-family: monospace;">master</span></td>
-  </tr>
-</table>
-
+| Key | Type | Description | Default |
+|-----|------|-------------|---------|
+| <span style="font-family: monospace;">['dfu_util']['user']</span> | String | User name used for install. The binary package will be given these user permissions and placed under this users home directory. | <span style="font-family: monospace;">vagrant</span> |
+| <span style="font-family: monospace;">['dfu_util']['group']</span> | String | Group to use for install. | <span style="font-family: monospace;">vagrant</span> |
+| <span style="font-family: monospace;">['dfu_util']['dir']</span> | String | Directory to place dfu_util_embedded downloads/binaries/sources. | <span style="font-family: monospace;">/home/#{node['dfu_util']['user']}/dfu-util</span> |
+| <span style="font-family: monospace;">['dfu_util']['directories']['tmp']</span> | String | tmp folder for cookbook-related activities | <span style="font-family: monospace;">#{node['dfu_util']['dir']}/tmp</span> |
+| <span style="font-family: monospace;">['dfu_util']['directories']['bin']</span> | String | bin folder for cookbook-related activities | <span style="font-family: monospace;">#{node['dfu_util']['dir']}/bin</span> |
+| <span style="font-family: monospace;">['dfu_util']['repo_url']</span> | String | dfu-util source git repository URL | <span style="font-family: monospace;">https://gitorious.org/dfu-util/dfu-util.git</span> |
+| <span style="font-family: monospace;">['dfu_util']['repo_ref']</span> | String | dfu-util source repository git-ref | <span style="font-family: monospace;">master</span> |
 
 ## Resources
 Not currently defined.
