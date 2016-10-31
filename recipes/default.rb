@@ -63,7 +63,7 @@ script 'Build dfu-util from Sources and Install' do
     ./configure
     make
     sudo make install
-    sudo ln -s /usr/local/bin/dfu-util /usr/bin/dfu-util
+    sudo ln -s -f /usr/local/bin/dfu-util /usr/bin/dfu-util
     EOH
   not_if { ::File.exists?("/usr/local/bin/dfu-util") && ::File.exists?("/usr/bin/dfu-util") }
 end
